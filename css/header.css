@@ -1,9 +1,16 @@
-nav{
-    width: 100%;
-
-    /*background: #0f0f0f;*/
+body{
+    background-color: aquamarine;
+    margin-top: 0;
 }
 
+header{
+    
+}
+
+nav{
+    width: 100%;
+    /*background: #0f0f0f;*/
+}
 nav.fixed{
     position: fixed;
     top: 0;
@@ -15,10 +22,8 @@ nav.fixed{
     margin:0 0 50px 0;
     list-style: none;
 }
-
 .navi li{
     display: inline-block;
-    
 }
 
 .navi li a{
@@ -31,12 +36,9 @@ nav.fixed{
 
 
 
-.navi li a{
-    position: relative;
-}
 
 .navi li a:hover{
-    color:#0481A2;
+    color:red;
 }
 
 .navi li a::after{
