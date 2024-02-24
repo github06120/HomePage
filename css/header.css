@@ -1,27 +1,28 @@
-body{
-    background-color: aquamarine;
-    margin-top: 0;
-}
-
 header{
-    
+    z-index: 999;
+    height: 80px;
 }
 
 nav{
-    width: 100%;
-    /*background: #0f0f0f;*/
-}
-nav.fixed{
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    background: white;
+}
+nav hr{
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    margin: 0;
 }
 
 .navi{
     text-align: center;
-    margin:0 0 50px 0;
+    margin: 0;
     list-style: none;
 }
+
 .navi li{
     display: inline-block;
 }
@@ -31,14 +32,10 @@ nav.fixed{
     padding: 20px 30px;
     text-decoration: none;
     
-    color: #333;
+    color: black;
 }
-
-
-
-
 .navi li a:hover{
-    color:red;
+    color:aqua;
 }
 
 .navi li a::after{
@@ -53,3 +50,4 @@ nav.fixed{
     transform:scale(0, 1);
     transform-origin: center top;
 }
+
