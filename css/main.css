@@ -9,3 +9,25 @@ body{
 .sections{
     display: block;
 }
+
+.aboutMe{
+    display: block;
+    text-align: center;
+}
+.profile{
+    display: flex;
+}
+.profile a{
+    
+}
+.information{
+    display: block;
+    text-align: center;
+}
+.works{
+    display: block;
+    text-align: center;
+}
+.work{
+    
+}
