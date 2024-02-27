@@ -12,21 +12,27 @@ body{
 
 .aboutMe{
     display: block;
-    text-align: center;
+    width: 300px;
+    margin: auto;
+    padding-top: 80px;
 }
 .profile{
-    display: flex;
-}
-.profile a{
+    display: inline-flex;
     
+}
+.profile .sentence{
+    display: block;
+    text-align: start;
 }
 .information{
     display: block;
     text-align: center;
+    padding-top: 80px;
 }
 .works{
     display: block;
     text-align: center;
+    padding-top: 80px;
 }
 .work{
     
