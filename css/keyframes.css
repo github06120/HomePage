@@ -1,3 +1,19 @@
+@keyframes twinkle{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
 @keyframes fadeUpAnime{
     from{
         opacity: 0;
