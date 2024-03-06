@@ -1,68 +1,109 @@
 <!DOCTYPE html>
 <html lang="jp">
     <head>
+        <link rel="stylesheet" type="text/css" href="css/keyframes.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/icon.css">
         <link rel="stylesheet" type="text/css" href="css/header.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="js/header.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
         
-
+        <title>ポリマー</title>
     </head>
 
     <body>
-        <header>
+        <header id="header">
             <nav>
-                <ul>
-                    <li><a href="#">TOP</a></li>
-                    <li><a href="#about_me">ABOUT ME</a></li>
+                <ul id="gg">
+                    <!-- <li><a href="#">TOP</a></li> -->
+                    <li><a href="#about-me">ABOUT ME</a></li>
                     <li><a href="#performance">PERFORMANCE</a></li>
                     <li><a href="#development">DEVELOPMENT</a></li>
                 </ul>
-                <hr>
             </nav>
         </header>
     
         <div class="sections">
-            <section id="about_me">
-                <div class="aboutMe">
-                    <h1>ABOUT ME</h1>
-                    
-                    <div class="profile">
-                        <img src="images/aboutImg.png" alt="プロフィール画像" width="200" height="100">
-                        
-                        <div class="sentence">
-                            <p>はじめまして</p>
-                            <p>中京大学工学部 情報工学科 4年 森山 廣大です。</p>
-                            <br>
-                            <p>Unityを使ってゲーム制作しています。また、</p>
-                            <p>好きなものは、</p>
-                        </div>
+            <section id="about-me">
+                <h2 class="_section">～ABOUT ME～</h2>
+
+                <div class="profile">
+                    <div class="fade-up">
+                        <img class="img" src="images/IMG_2201.JPG" alt="プロフィール画像">
+                    </div>
+                    <div class="sentence">
+                        <p>はじめまして</p>
+                        <p>中京大学工学部 情報工学科 4年 森山 廣大です。</p>
+                        <p>Unityを使ってゲーム制作しています。また、</p>
+                        <p>好きなものは、ゲーム</p>
                     </div>
 
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
                 </div>
             </section>
+
             <section id="performance">
-                <div class="information">
-                    <h1>PERFORMANCE</h1>
+                <h2 class="_section">～PERFORMANCE～</h2>
 
-                    <br><br><br><br><br><br><br><br><br>
-                    <br><br><br><br><br><br><br><br><br>
+                <div class="informations--screen">
+                    <ul class="informations">
+                        <li class="information">
+                            <p class="date">2022 03. 05</p>
+                            <p class="news">
+                                <a href="https://www.ipsj.or.jp/event/taikai/84/ipsj_web2022/data/pdf/6ZH-07.html" target="_blank">
+                                    「ARを用いた体感型学習支援ゲームの開発」  情報処理学会  第８４回全国大会
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
                 </div>
+            
             </section>
+
             <section id="development">
-                <div class="works">
-                    <h1>DEVELOPMENT</h1>
-                    <div class="work">
-                        WORK
-                        <br><br><br><br><br><br><br><br><br>
-                        <br><br><br><br><br><br><br><br><br>
-                    </div>
-                </div>
+                <h2 class="_section">～DEVELOPMENT～</h2>
+
+                <ul class="works">
+                    <li class="work"><span class="work-type">Unity</span>
+                        <div class="work--content">
+                            <div class="work--tittle">
+                                <h4>こんにちは</h4>
+                            </div>
+                            <img class="work--img" src="images/work1.png">
+
+                            <div class="work--interpretation">
+                                <p>
+                                    既存のカーレースとは違う体験をしてもらうためのカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
+                                </p>
+
+                                <div class="icons">
+                                    <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="work">
+                        <iframe class="work--iframe" src="images/work1.png"></iframe>
+                    </li>
+                    <li class="work"><span class="work-type">Unity</span>
+                        
+                    </li>
+                    <li class="work"><span class="work-type">Unity</span>
+                    
+                    </li>
+                    <li class="work"><span class="work-type">Unity</span>
+                    
+                    </li>
+                    <li class="work"></li>
+                </ul>
             </section>
         </div>
         
         <footer>
-            <p>©</p>
+            <p>©Koudai Moriyama</p>
         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+        <script src="js/performance.js"></script>
     </body>
 </html>

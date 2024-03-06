@@ -1,40 +1,56 @@
 header{
     z-index: 999;
-    height: 80px;
+    height: 15vh;
+    position: relative;
 }
 
 nav{
+    display: block;
     position: fixed;
-    top: 0;
-    left: 0;
+    height: 10vh;
     width: 100%;
-    background: white;
+    top:0;
+    margin: auto;
+    background: #FFF;
+    box-shadow: 0 0 2.5vw 0px rgba(255, 255, 255, 1.0);
 }
 
 nav ul{
-    display: block;
+    display: flex;
+    height: 100%;
     width: fit-content;
     margin: auto;
+    padding: auto;
     list-style: none;
+    align-items: center;
 }
 nav ul li{
     display: inline-block;
+    text-align: center;
+    margin: 2vh 3vw;
+}
+nav ul li:not(:first-child){
+    border-left: 1px solid black;
 }
 nav ul li a{
     display: block;
-    padding: 20px 30px;
+    margin-left: 5vw;
+    padding: 0;
 
     text-decoration: none;
     color: black;
     position: relative;
 }
+nav ul li a:hover{
+    color: aqua;
+}
 nav ul a::after{
     position: absolute;
     content: '';
     height: 2px;
-    width: 70%;
-    left: 15%;
-    bottom: 20%;
+    width: 80%;
+    left: 10%;
+    bottom: 0;
     background: aqua;
     transform: scale(0.0, 1.0);
     transform-origin: center;
@@ -42,25 +58,5 @@ nav ul a::after{
 }
 nav ul a:hover::after{
     transform: scale(1.0, 1.0);
+    color: aqua;
 }
-
-nav hr{
-    border: none;
-    width: 100%;
-    border-bottom: 1px solid #333;
-    margin: 0;
-}
-
-.navi li a::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left:10%;
-    width: 80%;
-    height: 2px;
-    background:#0481A2;
-    transition: all .3s;
-    transform:scale(0, 1);
-    transform-origin: center top;
-}
-
