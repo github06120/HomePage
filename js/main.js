@@ -4,7 +4,7 @@ $(window).on('load', function(){
 });
 
 //ページ内の指定の場所にスクロール関数
-$('#gg a[href*="#"]').click(function(){
+$('#menu a[href*="#"]').click(function(){
     var elmHash = $(this).attr('href'); //要素のハッシュ値
     var navHeight = document.getElementById("header").offsetHeight; //ナビの高さ
     var pos = $(elmHash).offset().top - navHeight; //ナビ分の高さを計算
