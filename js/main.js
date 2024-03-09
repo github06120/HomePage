@@ -1,7 +1,4 @@
 //ロード関数
-$(window).on('load', function(){
-    
-});
 
 //ページ内の指定の場所にスクロール関数
 $('#menu a[href*="#"]').click(function(){
@@ -12,25 +9,79 @@ $('#menu a[href*="#"]').click(function(){
     return false;
 });
 
-
-
-function FadeAnime(){
+function FadeUpAnime(){
     $('._section').each(function(){
+        var bool = getPosBool(this);
+        
+        if(bool){
+            $(this).addClass('section--fadeUpAnime');
+        }else{
+            $(this).removeClass('section--fadeUpAnime');
+        }
+    });
+
+    $('.smoothTextTrigger').each(function(){
+        var bool = getPosBool(this);
+
+        if(bool){
+            $(this).addClass('smoothTextPlay');
+        }else{
+            $(this).removeClass('smoothTextPlay');
+        }
+    });
+
+    $('.information').each(function(){
+        var bool = getPosBool(this);
+
+        if(bool){
+            $(this).addClass('information--fadeLeftAnime');
+        }else{
+            $(this).removeClass('information--fadeLeftAnime');
+        }
+    });
+
+    $('.work').each(function(){
+        var bool = getPosBool(this);
+
+        if(bool){
+            $(this).addClass('work--fadeUpAnime');
+        }else{
+            $(this).removeClass('work--fadeUpAnime');
+        }
+    });
+}
+
+function getPosBool(_this){
+    var elemPos = $(_this).offset().top;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+
+    if(scroll >= elemPos - windowHeight){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function InfoAnime(){
+    $('information').each(function(){
         var elemPos = $(this).offset().top - 50;
         var scroll = $(window).scrollTop();
         var windowHeight = $(window).height();
         if(scroll >= elemPos - windowHeight){
-            $(this).addClass('_section--fadeUpAnime');
+            $(this).addClass('.fadeUpAnime');
         }else{
-            $(this).removeClass('_section--fadeUpAnime');
+            $(this).removeClass('.fadeUpAnime');
         }
     });
 }
 
 $(window).scroll(function(){
-    FadeAnime();
+    FadeUpAnime();
+    InfoAnime();
 });
 
 $(window).on('load', function(){
-    FadeAnime();
+    FadeUpAnime();
+    InfoAnime();
 });

@@ -14,10 +14,10 @@
     }
 }
 
-@keyframes fadeUpAnime{
+@keyframes fadeUp{
     from{
         opacity: 0;
-        transform: translateY(5vh);
+        transform: translateY(2vw);
     }
     to{
         opacity: 1;
@@ -25,10 +25,10 @@
     }
 }
 
-@keyframes information_anime{
+@keyframes fadeLeft{
     from{
         opacity: 0;
-        transform: translateX(1vw);
+        transform: translateX(2vw);
     }
     to{
         opacity: 1;
