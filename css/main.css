@@ -236,8 +236,8 @@ img{
 }
 .work--img{
     display: block;
-    height: 50%;
-    width: 90%;
+    width: 50%;
+    object-fit: cover;
     margin: 0 auto;
     border: 0 ;
     padding: 0;
