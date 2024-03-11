@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="jp">
     <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/keyframes.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/icon.css">
@@ -28,16 +29,16 @@
             <section id="about-me">
                 <h2 class="_section">～ ABOUT ME ～</h2>
                 
-
                 <div class="profile">
-                    <div class="fade-up">
+                    <div class="_profile">
                         <img class="img" src="images/IMG_2201.JPG" alt="プロフィール画像">
-                    </div>
-                    <div class="sentence">
-                        <p class="smoothText"><span class="smoothTextTrigger">はじめまして</span></p>
-                        <p class="smoothText"><span class="smoothTextTrigger">中京大学工学部 情報工学科 4年 森山 廣大です。</span></p>
-                        <p class="smoothText"><span class="smoothTextTrigger">Unityを使ってゲーム制作しています。また、</span></p>
-                        <p class="smoothText"><span class="smoothTextTrigger">好きなものは、ゲーム</span></p>
+
+                        <div class="sentence">
+                            <p class="smoothText"><span class="smoothTextTrigger">はじめまして</span></p>
+                            <p class="smoothText"><span class="smoothTextTrigger">中京大学工学部 情報工学科 4年 森山 廣大です。</span></p>
+                            <p class="smoothText"><span class="smoothTextTrigger">Unityを使ってゲーム制作しています。また、</span></p>
+                            <p class="smoothText"><span class="smoothTextTrigger"></span>好きなものは、ゲーム</span></p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -45,15 +46,19 @@
             <section id="performance">
                 <h2 class="_section">～ PERFORMANCE ～</h2>
 
-                <div class="informations--screen">
+                <div class="_performance">
                     <ul class="informations">
                         <li class="information">
-                            <p class="date">2022 03. 05</p>
-                            <p class="news">
-                                <a href="https://www.ipsj.or.jp/event/taikai/84/ipsj_web2022/data/pdf/6ZH-07.html" target="_blank">
-                                    「ARを用いた体感型学習支援ゲームの開発」  情報処理学会  第８４回全国大会
-                                </a>
-                            </p>
+                            <div class="information--data">
+                                <div class="information--date"><p>2022 / 03 / 05</p></div>
+                                <div class="information--news">
+                                    <p>
+                                        <a href="https://www.ipsj.or.jp/event/taikai/84/ipsj_web2022/data/pdf/6ZH-07.html" target="_blank">
+                                            「ARを用いた体感型学習支援ゲームの開発」  情報処理学会  第８４回全国大会
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -69,8 +74,10 @@
                                 <h4>音声認識</h4>
                             </div>
                             
-                            <img class="work--img" src="images/work1.png">
-
+                            <div class="work--img--content">
+                                <img class="work--img" src="images/work1.png">
+                            </div>
+                            
                             <div class="work--interpretation">
                                 <p>
                                     既存のカーレースとは違う体験をしてもらうため,カーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
@@ -88,107 +95,132 @@
 
                     <li class="work">
                         <div class="work--iframe--content">
-                            <iframe class="work--iframe" src="images/work1.png"></iframe>
+                            <iframe class="work--iframe" src="https://www.youtube.com/embed/gJx4jQOGsAU?si=wNggP08jj3s_DChW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </li>
 
                     <li class="work"><span class="work--type">Unity</span>
                         <div class="work--content">
                             <div class="work--tittle">
-                                <h4>Listeing Mode</h4>
+                                <h4>音声認識</h4>
                             </div>
-    
-                            <img class="work--img" src="images/work1.png">
-    
+                            
+                            <div class="work--img--content">
+                                <img class="work--img" src="images/work1.png">
+                            </div>
+                            
                             <div class="work--interpretation">
                                 <p>
-                                    既存のカーレースとは違う体験をしてもらうためのカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
+                                    既存のカーレースとは違う体験をしてもらうため,カーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
                                 </p>
-    
+
                                 <div class="icons">
-                                    <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
+                                    <a href="">
+                                        <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
+                                    </a>
+                                    
                                 </div>
                             </div>
                         </div>
                     </li>
 
-                    <li class="work"><span class="work--type">Unity</span>
-                        <div class="work--content">
-                            <div class="work--tittle">
-                                <h4>Listeing Mode</h4>
-                            </div>
-    
-                            <img class="work--img" src="images/work1.png">
-    
-                            <div class="work--interpretation">
-                                <p>
-                                    既存のカーレースとは違う体験をしてもらうためのカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
-                                </p>
-    
-                                <div class="icons">
-                                    <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
-                                </div>
-                            </div>               
-                        </div>
-                    </li>
-                    
                     <li class="work"><span class="work--type">Blender</span>
                         <div class="work--content">
                             <div class="work--tittle">
-                                <h4>Listeing Mode</h4>
+                                <h4>音声認識</h4>
                             </div>
-    
-                            <img class="work--img" src="images/work2.png">
-    
+                            
+                            <div class="work--img--content">
+                                <img class="work--img" src="images/work2.png">
+                            </div>
+                            
                             <div class="work--interpretation">
                                 <p>
-                                    既存のカーレースとは違う体験をしてもらうためのカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
+                                    既存のカーレースとは違う体験をしてもらうため,カーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
                                 </p>
-    
+
                                 <div class="icons">
-                                    <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
+                                    <a href="">
+                                        <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
+                                    </a>
+                                    
                                 </div>
-                            </div>               
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="work"><span class="work--type">Unity</span>
+                        <div class="work--content">
+                            <div class="work--tittle">
+                                <h4>音声認識</h4>
+                            </div>
+                            
+                            <div class="work--img--content">
+                                <img class="work--img" src="images/work1.png">
+                            </div>
+                            
+                            <div class="work--interpretation">
+                                <p>
+                                    既存のカーレースとは違う体験をしてもらうため,カーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
+                                </p>
+
+                                <div class="icons">
+                                    <a href="">
+                                        <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
+                                    </a>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </li>
 
                     <li class="work"><span class="work--type">Unity</span>
                         <div class="work--content">
                             <div class="work--tittle">
-                                <h4>Listeing Mode</h4>
+                                <h4>音声認識</h4>
                             </div>
-    
-                            <img class="work--img" src="images/work1.png">
-    
+                            
+                            <div class="work--img--content">
+                                <img class="work--img" src="images/work1.png">
+                            </div>
+                            
                             <div class="work--interpretation">
                                 <p>
-                                    既存のカーレースとは違う体験をしてもらうためのカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
+                                    既存のカーレースとは違う体験をしてもらうため,カーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
                                 </p>
-    
+
                                 <div class="icons">
-                                    <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
+                                    <a href="">
+                                        <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
+                                    </a>
+                                    
                                 </div>
-                            </div>               
+                            </div>
                         </div>
                     </li>
 
                     <li class="work"><span class="work--type">Unity</span>
                         <div class="work--content">
                             <div class="work--tittle">
-                                <h4>Listeing Mode</h4>
+                                <h4>音声認識</h4>
                             </div>
-    
-                            <img class="work--img" src="images/work1.png">
-    
+                            
+                            <div class="work--img--content">
+                                <img class="work--img" src="images/work1.png">
+                            </div>
+                            
                             <div class="work--interpretation">
                                 <p>
-                                    既存のカーレースとは違う体験をしてもらうためのカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
+                                    既存のカーレースとは違う体験をしてもらうため,カーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース既存のカーレース
                                 </p>
-    
+
                                 <div class="icons">
-                                    <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
+                                    <a href="">
+                                        <img class="icon--youtube" src="images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png">
+                                    </a>
+                                    
                                 </div>
-                            </div>               
+                            </div>
                         </div>
                     </li>
                 </ul>

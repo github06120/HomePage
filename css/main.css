@@ -27,17 +27,20 @@ img{
     animation: twinkle 5s infinite;
 }
 .smoothText{
-    overflow: hidden;
     display: block;
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
 }
 .smoothTextTrigger{
-    transition: .8s ease-in-out;
-    transform: translate3d(0, 100%, 0)skewY(12deg);
-    transform-origin: left;
     display: block;
+    transform: translateY(0)skewY(1deg);
 }
-.smoothTextPlay{
-    transform: translate3d(0, 0, 0)skewY(0);
+.--smoothTextPlay{
+    animation-name: entryP;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
 
@@ -71,27 +74,32 @@ img{
     margin-top: 5vw;
 }
 .profile{
+    position: relative;
     display: flex;
     width: 60vw;
     height: 15vw;
-    margin: 0 auto;
     left: 0;
-    justify-content: center;
     border-radius: 3vw;
     box-shadow: 0px 8px 2px rgba(255, 255, 255, 0.2);
     background: #EFEFEF;
 }
-.profile .img{
+._profile{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.img{
     width: auto;
     height: 100%;
 }
 .profile .sentence{
-    display: inline-block;
+    display: flex;
     text-align: start;
-    margin: 10px;
-    padding: 5px;
+}
+.profile .sentence p{
     font-size: 1vw;
 }
+
 
 /* キャリアのCSS */
 #performance{
@@ -99,15 +107,14 @@ img{
     margin-top: 5vw;
 }
 
-.informations--screen{
+._performance{
     position: relative;
     display: flex;
-    width: 50vw;
-    height: 10vw;
+    width: 90vw;
+    height: 20vw;
     margin: 0 auto;
     padding: 0vw;
-    justify-content: center;
-    align-items: center;
+    align-content: center;
     border-radius: 1vw;
     background: #EFEFEF;
     box-shadow: 0px 8px 2px rgba(255, 255, 255, 0.2);
@@ -116,23 +123,26 @@ img{
     position: absolute;
     display: flex;
     width: 99%;
-    height: 90%;
+    height: 80%;
+    margin: 2% 0;
     flex-wrap: wrap;
     padding: 0;
     justify-content: center;
     align-items: center;
     border-top: dashed 1px #000000;
     border-bottom: dashed 1px #000000;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: red;
 }
 .information{
-    position: absolute;
-    display: block;
-    width: 70%;
-    height: 3.5vw;
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 40%;
     margin: 0 auto;
-    padding: 1vw 4vw;
+    padding: 0;
     text-align: left;
-    align-items: center;
     border-top: 1px solid rgba(0, 0, 0, .4);
     border-right: 1px solid rgba(0, 0, 0, .4);
     border-bottom: 1px solid rgba(0, 0, 0, .4);
@@ -141,16 +151,36 @@ img{
     list-style: none;
     opacity: 0;
 }
-.information .date{
-    display: inline-block;
+.information--data{
+    position: absolute;
+    display: flex;
+    width: calc(100% - 2vw);
+    height: 100%;
     margin: 0;
-    padding: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    padding-left: 2vw;
+    flex-flow: column;
+    justify-content: space-around;
+    text-align: center;
 }
-.information .news{
-    display: block;
-    margin: 0.5vw 0 0 0;
-    padding: 0;
+.information--date{
+    display: flex;
+    width: fit-content;
+    text-align: left;
+}
+.information--date p{
+    display: flex;
+    width: fit-content;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    font-size: 0.8vw;
+}
+.information--news{
+    display: flex;
+    width: fit-content;
+    font-size: 1.2vw;
+}
+.information--news p{
+    margin: 0;
 }
 
 .information--fadeLeftAnime{
@@ -169,7 +199,7 @@ img{
     display: flex;
     flex-wrap: wrap;
     width: 92vw;
-    height: 140vw;
+    height: 170vw;
     margin: 0 auto;
     padding: 0 1vw 0 1vw;
     justify-content: center;
@@ -188,6 +218,8 @@ img{
     width: calc(40% - 2vw);
     margin: 0;
 }
+
+
 /* 制作物の紹介のボックス */
 .work{
     position: relative;
@@ -234,30 +266,36 @@ img{
     font-size: 1vw;
     color: #FFFFFF;
 }
+.work--img--content{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 52%;
+    align-items: center;
+    justify-content: center;
+}
 .work--img{
+    position: absolute;
     display: block;
-    width: 50%;
-    object-fit: cover;
+    width: auto;
+    height: 100%;
     margin: 0 auto;
     border: 0 ;
-    padding: 0;
     border-radius: 10px;
 }
 .work--iframe--content{
     position: relative;
+    display: flex;
     width: 100%;
     height: 100%;
-    
-    background: red;
+    align-items: center;
+    justify-content: center;
 }
 .work--iframe{
     position: absolute;
     aspect-ratio: 16 / 9;
-    width: 20vw;
+    width: 100%;
     height: auto;
-    top: 0;
-    left: 0;
-    transform-origin: 0 0;
     border: 0;
 }
 .work--interpretation{
@@ -266,7 +304,7 @@ img{
     height: 36%;
     width: 80%;
     margin: 1% auto;
-    padding: 1% 5%;
+    padding: 0% 5% 1% 5%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -300,20 +338,56 @@ img{
 }
 .work--interpretation .icons{
     position: absolute;
-    width: 60%;
-    height: 10%;
+    width: 40%;
+    height: 15%;
     margin: 0.5%;
+    align-content: center;
     right: 0;
     bottom: 0;
-    background: #324A80;
-
 }
 .work--interpretation .icons .icon--youtube{
     position: absolute;
     display: flex;
-    width: 15%;
-    height: auto;
+    width: auto;
+    height: 100%;
     margin: 0;
     bottom: 0;
     z-index: 10;
+}
+
+@media  screen and (max-width:880px) {
+    .works{
+        display: flex;
+        flex-wrap: wrap;
+        width: 92vw;
+        height: 300vw;
+        margin: 0 auto;
+        padding: 0 1vw 0 1vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        list-style: none;
+        overflow: hidden;
+    }
+    /* workの左寄せ用の空の要素 */
+    .works::after{
+        content: "";
+        display: flex;
+        height: 0;
+        width: calc(40% - 2vw);
+        margin: 0;
+    }
+    .work{
+        position: relative;
+        display: flex;
+        height: calc(14% - 1vw);
+        width: calc(100% - 2vw);
+        margin: 0;
+        padding: 0;
+        background: aqua;
+        border-radius: 20px;
+        color: #FFFFFF;
+        overflow: hidden;
+        box-shadow: 0.4vw 0.825vw 0.825vw 0 rgba(200, 200, 174, .4);
+    }
 }
