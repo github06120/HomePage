@@ -16,7 +16,7 @@
 
 @keyframes entryP{
     form{
-        transform: translateY(10vw)skewY(90deg);
+        transform: translateY(10vw)skewY(15deg);
     }
     to{
         transform: translateY(0)skewY(0);
