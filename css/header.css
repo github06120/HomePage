@@ -34,13 +34,13 @@ nav ul li:not(:first-child){
     border-left: 1px solid black;
 }
 nav ul li a{
+    position: relative;
     display: block;
     margin-left: 5vw;
     padding: 0;
-
     text-decoration: none;
     color: black;
-    position: relative;
+    text-wrap: nowrap;
 }
 nav ul li a:hover{
     color: aqua;
@@ -49,8 +49,8 @@ nav ul a::after{
     position: absolute;
     content: '';
     height: 2px;
-    width: 80%;
-    left: 10%;
+    width: 90%;
+    left: 5%;
     bottom: 0;
     background: aqua;
     transform: scale(0.0, 1.0);

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
 html{
-
 }
 body{
     position: relative;
@@ -255,18 +254,20 @@ img{
 }
 
 .work--tittle{
-    display: block;
+    display: flex;
     height: 10%;
     width: 100%;
     margin: 0;
     padding: 0;
     top: 0;
-    text-align: center;
+    justify-content: center;
     align-items: center;
     background: blue;
 }
 .work--tittle h4{
-    display: inline-block;
+    display: flex;
+    margin: 0;
+    align-items: center;
     font-size: 1vw;
     color: #FFFFFF;
 }
@@ -355,15 +356,47 @@ img{
 }
 .work--interpretation .icons{
     position: absolute;
+    display: flex;
+    background: blue;
     width: 40%;
     height: 15%;
     margin: 0.5%;
-    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     right: 0;
     bottom: 0;
 }
-.work--interpretation .icons .icon--youtube{
+.balloon{
+    position: relative;
+    display: inline;
+}
+.balloon:hover ._balloon{
+    display: inline;
+}
+.balloon ._balloon{
     position: absolute;
+    display: none;
+    padding: 2px;
+    background: rgba(78, 78, 78, 1);
+    width: 100px;
+    left: -50%;
+    bottom: 110%;
+    color: #FFFFFF;
+}
+.balloon ._balloon::after{
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 0;
+    left: 20%;
+    bottom: -50%;
+    border: solid transparent;
+    border-color: rgba(78, 78, 78, 0);
+    border-top-color: rgba(78, 78, 78, 1);
+    border-width: 10px;
+
+}
+.work--interpretation .icons .icon--youtube{
     display: flex;
     width: auto;
     height: 100%;
