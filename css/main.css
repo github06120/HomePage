@@ -406,6 +406,9 @@ img{
 
 /* screen 959px以下  */
 @media  screen and (max-width:900px) {
+    br{
+        display: none;
+    }
     .works{
         display: flex;
         flex-wrap: wrap;
@@ -445,6 +448,7 @@ img{
         display: flex;
         width: 100%;
         height: 100%;
+        justify-content: space-between;
     }
     .work--img--content{
         display: flex;
@@ -460,7 +464,7 @@ img{
     }
     
     .work--tittle{
-        display: block;
+        display: flex;
         height: 10%;
         width: 100%;
         margin: 0;
@@ -472,13 +476,13 @@ img{
     }
     .work--tittle h4{
         display: inline-block;
-        font-size: 1vw;
+        font-size: 1.5vw;
         color: #FFFFFF;
     }
     .work--img--content{
         position: relative;
         display: flex;
-        width: 45%;
+        width: 50%;
         height: 90%;
     }
     .work--img{
@@ -507,14 +511,13 @@ img{
     }
     .work--interpretation{
         position: relative;
-        display: flex;
+        display: block;
         height: 90%;
-        width: 55%;
+        width: 45%;
         margin: 0;
-        padding: 0% ;
+        padding: 0% 2% 0% 2%;
         right: 0;
         bottom: 0;
-        left: 0;
         border-radius: 3px;
         text-align: center;
         background:#FFFFFF;
@@ -522,7 +525,7 @@ img{
     .work--interpretation p{
         text-align: left;
         font-family: 'M PLUS Rounded 1c', sans-serif;
-        font-size: 1vw;
+        font-size: 2vw;
         color: #000000;
         text-indent: 1.5em;
     }
@@ -544,20 +547,50 @@ img{
     }
     .work--interpretation .icons{
         position: absolute;
-        width: 40%;
+        width: 100%;
         height: 15%;
         margin: 0.5%;
         align-content: center;
         right: 0;
         bottom: 0;
+        z-index: 1;
+    }
+    .balloon{
+        position: relative;
+        display: inline;
+    }
+    .balloon:hover ._balloon{
+        display: inline;
+    }
+    .balloon ._balloon{
+        position: absolute;
+        display: none;
+        padding: 2px;
+        background: rgba(78, 78, 78, 1);
+        width: 100px;
+        left: -50%;
+        bottom: 110%;
+        color: #FFFFFF;
+    }
+    .balloon ._balloon::after{
+        position: absolute;
+        content: " ";
+        width: 0;
+        height: 0;
+        left: 20%;
+        bottom: -50%;
+        border: solid transparent;
+        border-color: rgba(78, 78, 78, 0);
+        border-top-color: rgba(78, 78, 78, 1);
+        border-width: 10px;
     }
     .work--interpretation .icons .icon--youtube{
-        position: absolute;
         display: flex;
         width: auto;
         height: 100%;
         margin: 0;
+        padding: 0;
         bottom: 0;
-        z-index: 10;
+        z-index: 999;
     }
 }
