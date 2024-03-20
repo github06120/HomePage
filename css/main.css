@@ -357,7 +357,6 @@ img{
 .work--interpretation .icons{
     position: absolute;
     display: flex;
-    background: blue;
     width: 40%;
     height: 15%;
     margin: 0.5%;
