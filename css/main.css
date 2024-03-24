@@ -402,22 +402,60 @@ img{
     z-index: 10;
 }
 
-/* screen 959px以下  */
+/* screen 900px以下  */
 @media  screen and (max-width:900px) {
     br{
         display: none;
     }
+    .sections{
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    /* about meのモバイルサイズ */
     #about-me{
         width: 100%;
-        margin-top: 15vw;
+        margin-top: 30vw;
     }
+    .profile{
+        position: relative;
+        display: flex;
+        width: 90vw;
+        height: 20vh;
+        margin: 0 auto;
+        border-radius: 3vw;
+        box-shadow: 0px 8px 2px rgba(255, 255, 255, 0.2);
+        background: #EFEFEF;
+    }
+    ._profile{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+    ._profile .img{
+        width: auto;
+        height: 100%;
+        padding: 0 0 0 10%;
+    }
+    ._profile .sentence{
+        display: block;
+        width: 50%;
+        text-align: start;
+    }
+    .profile .sentence p{
+        font-size: 2vw
+    }
+    
     #performance{
         width: 100%;
-        margin-top: 15vw;
+        margin-top: 20vw;
     }
     #develop{
         width: 100%;
-        margin-top: 15vw;
+        margin-top: 20vw;
     }
     .works{
         display: flex;
