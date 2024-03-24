@@ -407,6 +407,18 @@ img{
     br{
         display: none;
     }
+    #about-me{
+        width: 100%;
+        margin-top: 15vw;
+    }
+    #performance{
+        width: 100%;
+        margin-top: 15vw;
+    }
+    #develop{
+        width: 100%;
+        margin-top: 15vw;
+    }
     .works{
         display: flex;
         flex-wrap: wrap;
