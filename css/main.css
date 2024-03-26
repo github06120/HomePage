@@ -430,7 +430,7 @@ img{
         position: relative;
         display: flex;
         width: 90vw;
-        height: 40vw;
+        height: 45vw;
         margin: 0 auto;
         border-radius: 3vw;
         box-shadow: 0px 8px 2px rgba(255, 255, 255, 0.2);
@@ -454,7 +454,7 @@ img{
         text-align: start;
     }
     .profile .sentence p{
-        font-size: 2vw
+        font-size: 2.5vw
     }
 
 
@@ -492,14 +492,14 @@ img{
     .information{
         position: relative;
         display: flex;
-        width: 90%;
+        width: 80%;
         height: 40%;
         margin: 0 auto;
-        padding: 0;
+        padding: 0 0 0 10%;
         border-top: 1px solid rgba(0, 0, 0, .4);
         border-right: 1px solid rgba(0, 0, 0, .4);
         border-bottom: 1px solid rgba(0, 0, 0, .4);
-        border-left: 4vw solid #F0F000;
+        border-left: 3vw solid #F0F000;
         background: #FFFFFF;
         list-style: none;
         opacity: 0;
@@ -525,13 +525,13 @@ img{
         width: fit-content;
         margin: 0;
         border-bottom: 1px solid rgba(0, 0, 0, .5);
-        font-size: 2.2vw;
+        font-size: 2.4vw;
     }
     .information--news{
         display: flex;
         width: 100%;
         text-wrap: wrap;
-        font-size: 2.5vw;
+        font-size: 2.8vw;
     }
     .information--news p{
         margin: 0;
@@ -569,7 +569,7 @@ img{
         width: calc(100% - 2vw);
         margin: 0;
         padding: 0;
-        background: aqua;
+        background: #283966;
         border-radius: 20px;
         color: #FFFFFF;
         overflow: hidden;
@@ -612,7 +612,7 @@ img{
         top: 0;
         text-align: center;
         align-items: center;
-        background: blue;
+        background: #6392ff
     }
     .work--tittle br{
         display: none;
