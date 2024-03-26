@@ -5,7 +5,7 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #324A80 65%, #FFFFFF);
+    background: linear-gradient(to bottom, #324A80 40%, #FFFFFF);
 }
 img{
     max-width: 100%;
@@ -421,6 +421,23 @@ img{
         text-shadow: 0px 5px 2px rgba(255, 255, 255, 0.2);
         color: #EFEFEF;
     }
+    .smoothText{
+        display: block;
+        overflow: hidden;
+        width: fit-content;
+        height: fit-content;
+    }
+    .smoothTextTrigger{
+        display: block;
+        transform: translateY(15vw)skewY(15deg);
+    }
+    .smoothTextPlay{
+        animation-name: entryP;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
     /* about meのモバイルサイズ */
     #about-me{
         width: 100%;
@@ -451,13 +468,16 @@ img{
     ._profile .sentence{
         display: block;
         width: 50%;
+        height: 80%;
+        margin: 10% auto;
         text-align: start;
+        line-break: loose;
     }
     .profile .sentence p{
-        font-size: 2.5vw
+        margin: 10px 0;
+        font-size: 2vw;
     }
-
-
+    s
     #performance{
         width: 100%;
         margin-top: 30vw;
@@ -648,8 +668,8 @@ img{
     .work--iframe{
         position: absolute;
         aspect-ratio: 16 / 9;
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
         border: 0;
     }
     .work--interpretation{
@@ -668,7 +688,7 @@ img{
     .work--interpretation p{
         text-align: left;
         font-family: 'M PLUS Rounded 1c', sans-serif;
-        font-size: 2.5vw;
+        font-size: 2.3vw;
         color: #000000;
         text-indent: 1.5em;
     }
@@ -676,55 +696,94 @@ img{
         position: absolute;
         display: inline-block;
         margin: 0;
-        padding: 0.5vw 8vw;
-        top: 7%;
-        left: -6%;
+        padding: 0.5vw 9vw;
+        top: 5%;
+        left: -7%;
         transform: rotate(-45deg);
         border-bottom: 2px solid rgba(0, 0, 0, .5);
         /* font-family: 'M PLUS Rounded 1c', sans-serif; */
         font-size: 100%;
         color: #000000;
         background: #FFFFFF;
-        font-size: 2vw;
+        font-size: 3vw;
         z-index: 10;
     }
     .work--interpretation .icons{
         position: absolute;
         width: 70%;
-        height: 15%;
+        height: 10%;
         margin: 0.5%;
         align-content: center;
         right: 0;
         bottom: 0;
         z-index: 1;
     }
-    .balloon{
-        position: relative;
-        display: inline;
+    @media (hover: hover){
+        .balloon{
+            position: relative;
+            display: inline;
+        }
+        .balloon:hover ._balloon{
+            display: inline;
+        }
+        .balloon ._balloon{
+            position: absolute;
+            display: none;
+            width: fit-content;
+            height: fit-content;
+            padding: 0;
+            bottom: 110%;
+            left: 0%;
+            background: rgba(78, 78, 78, 1);
+            white-space: nowrap;
+            color: #FFFFFF;
+        }
+        .balloon ._balloon::after{
+            position: absolute;
+            content: " ";
+            width: 0;
+            height: 0;
+            left: 10%;
+            bottom: -80%;
+            border: solid transparent;
+            border-color: rgba(78, 78, 78, 0);
+            border-top-color: rgba(78, 78, 78, 1);
+            border-width: 10px;
+        }
     }
-    .balloon:hover ._balloon{
-        display: inline;
-    }
-    .balloon ._balloon{
-        display: none;
-        width: fit-content;
-        height: fit-content;
-        padding: 0;
-        background: rgba(78, 78, 78, 1);
-        white-space: nowrap;
-        color: #FFFFFF;
-    }
-    .balloon ._balloon::after{
-        position: absolute;
-        content: " ";
-        width: 0;
-        height: 0;
-        left: 0;
-        bottom: -93%;
-        border: solid transparent;
-        border-color: rgba(78, 78, 78, 0);
-        border-top-color: rgba(78, 78, 78, 1);
-        border-width: 10px;
+    @media (hover: none){
+        .balloon{
+            position: relative;
+            display: inline;
+        }
+        .balloon:active ._balloon{
+            display: inline;
+        }
+        .balloon ._balloon{
+            position: absolute;
+            display: none;
+            width: fit-content;
+            height: fit-content;
+            padding: 0;
+            bottom: 110%;
+            left: 0%;
+            font-size: 1vw;
+            background: rgba(78, 78, 78, 1);
+            white-space: nowrap;
+            color: #FFFFFF;
+        }
+        .balloon ._balloon::after{
+            position: absolute;
+            content: " ";
+            width: 0;
+            height: 0;
+            left: 10%;
+            bottom: -80%;
+            border: solid transparent;
+            border-color: rgba(78, 78, 78, 0);
+            border-top-color: rgba(78, 78, 78, 1);
+            border-width: 10px;
+        }
     }
     .work--interpretation .icons .icon--youtube{
         display: flex;
