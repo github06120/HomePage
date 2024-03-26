@@ -718,40 +718,7 @@ img{
         bottom: 0;
         z-index: 1;
     }
-    @media (hover: hover){
-        .balloon{
-            position: relative;
-            display: inline;
-        }
-        .balloon:hover ._balloon{
-            display: inline;
-        }
-        .balloon ._balloon{
-            position: absolute;
-            display: none;
-            width: fit-content;
-            height: fit-content;
-            padding: 0;
-            bottom: 110%;
-            left: 0%;
-            background: rgba(78, 78, 78, 1);
-            white-space: nowrap;
-            color: #FFFFFF;
-        }
-        .balloon ._balloon::after{
-            position: absolute;
-            content: " ";
-            width: 0;
-            height: 0;
-            left: 10%;
-            bottom: -80%;
-            border: solid transparent;
-            border-color: rgba(78, 78, 78, 0);
-            border-top-color: rgba(78, 78, 78, 1);
-            border-width: 10px;
-        }
-    }
-    @media (hover: none){
+    
         .balloon{
             position: relative;
             display: inline;
@@ -767,7 +734,6 @@ img{
             padding: 0;
             bottom: 110%;
             left: 0%;
-            font-size: 1vw;
             background: rgba(78, 78, 78, 1);
             white-space: nowrap;
             color: #FFFFFF;
@@ -784,7 +750,7 @@ img{
             border-top-color: rgba(78, 78, 78, 1);
             border-width: 10px;
         }
-    }
+    
     .work--interpretation .icons .icon--youtube{
         display: flex;
         width: auto;
