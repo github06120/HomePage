@@ -718,15 +718,12 @@ img{
         bottom: 0;
         z-index: 1;
     }
+    .balloon{
+        position: relative;
+        display: inline;
+    }
     
-        .balloon{
-            position: relative;
-            display: inline;
-        }
-        .balloon:active ._balloon{
-            display: inline;
-        }
-        .balloon ._balloon{
+    .balloon ._balloon{
             position: absolute;
             display: none;
             width: fit-content;
@@ -737,8 +734,8 @@ img{
             background: rgba(78, 78, 78, 1);
             white-space: nowrap;
             color: #FFFFFF;
-        }
-        .balloon ._balloon::after{
+    }
+    .balloon ._balloon::after{
             position: absolute;
             content: " ";
             width: 0;
@@ -749,7 +746,8 @@ img{
             border-color: rgba(78, 78, 78, 0);
             border-top-color: rgba(78, 78, 78, 1);
             border-width: 10px;
-        }
+    }
+
     
     .work--interpretation .icons .icon--youtube{
         display: flex;
@@ -761,3 +759,14 @@ img{
         z-index: 10;
     }
 }
+@media(hover:hover){
+    .balloon:hover ._balloon{
+        display: inline;
+    }
+}
+@media(any-hover:none){
+    .balloon:active ._balloon{
+        display: inline;
+    }
+}
+

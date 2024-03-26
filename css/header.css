@@ -44,9 +44,7 @@ nav ul li a{
     color: black;
     text-wrap: nowrap;
 }
-nav ul li a:hover{
-    color: aqua;
-}
+
 nav ul a::after{
     position: absolute;
     content: '';
@@ -129,6 +127,17 @@ nav ul a:hover::after{
     }
     nav ul a:hover::after{
         transform: scale(1.0, 1.0);
+        color: aqua;
+    }
+}
+
+@media(hover:hover){
+    nav ul li a:hover{
+        color: aqua;
+    }
+}
+@media(hover:none){
+    nav ul li a:active{
         color: aqua;
     }
 }
