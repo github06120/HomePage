@@ -404,14 +404,22 @@ img{
 
 /* screen 900px以下  */
 @media  screen and (max-width:900px) {
-    br{
-        display: none;
-    }
+    
     .sections{
         display: block;
         width: 100%;
         margin: 0;
         text-align: center;
+    }
+    ._section{
+        display: flex;
+        margin: 5vw 0;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        font-size: 4vw;
+        text-shadow: 0px 5px 2px rgba(255, 255, 255, 0.2);
+        color: #EFEFEF;
     }
     /* about meのモバイルサイズ */
     #about-me{
@@ -422,7 +430,7 @@ img{
         position: relative;
         display: flex;
         width: 90vw;
-        height: 20vh;
+        height: 40vw;
         margin: 0 auto;
         border-radius: 3vw;
         box-shadow: 0px 8px 2px rgba(255, 255, 255, 0.2);
@@ -448,20 +456,104 @@ img{
     .profile .sentence p{
         font-size: 2vw
     }
-    
+
+
     #performance{
         width: 100%;
-        margin-top: 20vw;
+        margin-top: 30vw;
     }
-    #develop{
+    ._performance{
+        position: relative;
+        display: flex;
+        width: 90vw;
+        height: 40vw;
+        margin: 0 auto;
+        padding: 0vw;
+        align-content: center;
+        border-radius: 1vw;
+        background: #EFEFEF;
+        box-shadow: 0px 8px 2px rgba(255, 255, 255, 0.2);
+    }
+    .informations{
+        position: absolute;
+        display: flex;
+        width: 99%;
+        height: 90%;
+        margin: 2% 0;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        border-top: dashed 1px #000000;
+        border-bottom: dashed 1px #000000;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .information{
+        position: relative;
+        display: flex;
+        width: 90%;
+        height: 40%;
+        margin: 0 auto;
+        padding: 0;
+        border-top: 1px solid rgba(0, 0, 0, .4);
+        border-right: 1px solid rgba(0, 0, 0, .4);
+        border-bottom: 1px solid rgba(0, 0, 0, .4);
+        border-left: 4vw solid #F0F000;
+        background: #FFFFFF;
+        list-style: none;
+        opacity: 0;
+    }
+    .information--data{
+        position: absolute;
+        display: flex;
+        width: calc(100% - 2vw);
+        height: 100%;
+        margin: 0;
+        padding-left: 2vw;
+        flex-flow: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .information--date{
+        display: flex;
+        width: fit-content;
+        text-align: left;
+    }
+    .information--date p{
+        display: flex;
+        width: fit-content;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .5);
+        font-size: 2.2vw;
+    }
+    .information--news{
+        display: flex;
         width: 100%;
-        margin-top: 20vw;
+        text-wrap: wrap;
+        font-size: 2.5vw;
+    }
+    .information--news p{
+        margin: 0;
+    }
+    
+    .information--fadeLeftAnime{
+        animation-name: fadeLeft;
+        animation-duration: 1.0s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    
+    #development{
+        width: 100%;
+        margin-top: 30vw;
     }
     .works{
         display: flex;
         flex-wrap: wrap;
         width: 92vw;
-        height: 300vw;
+        height: 400vw;
         margin: 0 auto;
         padding: 0 1vw 0 1vw;
         justify-content: center;
@@ -522,9 +614,12 @@ img{
         align-items: center;
         background: blue;
     }
+    .work--tittle br{
+        display: none;
+    }
     .work--tittle h4{
         display: inline-block;
-        font-size: 1.5vw;
+        font-size: 2.2vw;
         color: #FFFFFF;
     }
     .work--img--content{
@@ -573,7 +668,7 @@ img{
     .work--interpretation p{
         text-align: left;
         font-family: 'M PLUS Rounded 1c', sans-serif;
-        font-size: 2vw;
+        font-size: 2.5vw;
         color: #000000;
         text-indent: 1.5em;
     }
@@ -611,14 +706,12 @@ img{
         display: inline;
     }
     .balloon ._balloon{
-        position: absolute;
         display: none;
-        width: 188px;
-        padding: 2px;
+        width: fit-content;
+        height: fit-content;
+        padding: 0;
         background: rgba(78, 78, 78, 1);
-        
-        left: -90%;
-        bottom: 110%;
+        white-space: nowrap;
         color: #FFFFFF;
     }
     .balloon ._balloon::after{
@@ -626,8 +719,8 @@ img{
         content: " ";
         width: 0;
         height: 0;
-        left: 45%;
-        bottom: -50%;
+        left: 0;
+        bottom: -93%;
         border: solid transparent;
         border-color: rgba(78, 78, 78, 0);
         border-top-color: rgba(78, 78, 78, 1);
